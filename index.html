@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --bg: #0f172a;
-      --card: #020617;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --accent: #38bdf8;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
     }
 
     * {
@@ -21,7 +22,7 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      background: radial-gradient(circle at top, #e5f0ff 0, #f9fafb 55%);
       color: var(--text);
       padding: 24px;
       display: flex;
@@ -34,11 +35,11 @@
     }
 
     .card {
-      background: linear-gradient(135deg, #020617 0, #020617 40%, #0b1120 100%);
+      background: var(--card);
       border-radius: 18px;
       padding: 28px 26px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(148, 163, 184, 0.14);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      border: 1px solid var(--border);
     }
 
     .header {
@@ -47,7 +48,7 @@
       justify-content: space-between;
       gap: 16px;
       margin-bottom: 16px;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      border-bottom: 1px solid var(--border);
       padding-bottom: 14px;
     }
 
@@ -89,19 +90,19 @@
       padding: 8px 14px;
       font-size: 0.85rem;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: radial-gradient(circle at top left, #38bdf8 0, #0f172a 50%);
-      color: #0b1120;
+      border: 1px solid rgba(37, 99, 235, 0.5);
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      color: #f9fafb;
       font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
       transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
     }
 
     .download-btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
-      filter: brightness(1.05);
+      box-shadow: 0 16px 36px rgba(37, 99, 235, 0.45);
+      filter: brightness(1.03);
     }
 
     .section {
@@ -118,8 +119,8 @@
 
     .summary {
       font-size: 0.9rem;
-      line-height: 1.4;
-      color: #d1d5db;
+      line-height: 1.5;
+      color: #374151;
     }
 
     .pill-row {
@@ -133,9 +134,9 @@
       font-size: 0.78rem;
       padding: 4px 8px;
       border-radius: 999px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: #e5e7eb;
+      background: #eff6ff;
+      border: 1px solid #dbeafe;
+      color: #1d4ed8;
       white-space: nowrap;
     }
 
@@ -152,7 +153,7 @@
 
     .exp-role {
       font-weight: 600;
-      color: #e5e7eb;
+      color: #111827;
     }
 
     .exp-company {
@@ -170,7 +171,7 @@
       margin-top: 4px;
       margin-left: 16px;
       font-size: 0.84rem;
-      color: #d1d5db;
+      color: #374151;
     }
 
     .exp-bullets li {
@@ -179,7 +180,7 @@
 
     .inline-list {
       font-size: 0.84rem;
-      color: #d1d5db;
+      color: #374151;
     }
 
     .inline-list span {
@@ -227,7 +228,7 @@
       <div class="download-wrapper">
         <a
           class="download-btn"
-          href="Nicolas_Lagos_CV_International.pdf"
+          href="Nicolas_Lagos_CV_European_Consulting.pdf"
           download
         >
           Download CV (PDF)
@@ -324,7 +325,7 @@
             <li>Migrated legacy workloads to MongoDB on Azure, reducing maintenance overhead.</li>
             <li>Implemented notification services and Fintoc payment integration.</li>
             <li>Resolved security issues using Fortify and automated dependency management via Dependabot.</li>
-            <li>Migrated legacy services to AWS and set up monitoring dashboards.</li>
+            <li>Migrated backend services to AWS and set up monitoring dashboards.</li>
           </ul>
         </article>
 
