@@ -2,467 +2,318 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CV – Nicolás Lagos</title>
+  <title>Nicolás Lagos - CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.5;
-      color: #0f172a;
-      background: #0b1120;
+      --bg: #0f172a;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 2rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      color: var(--text);
+      padding: 24px;
       display: flex;
       justify-content: center;
     }
 
     .page {
-      background: #f9fafb;
       max-width: 900px;
       width: 100%;
-      border-radius: 1.5rem;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
-      padding: 2.5rem 2.75rem;
-      box-sizing: border-box;
     }
 
-    .toolbar {
+    .card {
+      background: linear-gradient(135deg, #020617 0, #020617 40%, #0b1120 100%);
+      border-radius: 18px;
+      padding: 28px 26px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .header {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
       flex-wrap: wrap;
-    }
-
-    .toolbar-title {
-      font-weight: 600;
-      font-size: 1.1rem;
-      opacity: 0.8;
-    }
-
-    .toolbar button {
-      border: none;
-      border-radius: 999px;
-      padding: 0.65rem 1.4rem;
-      font-size: 0.95rem;
-      cursor: pointer;
-      background: #0f766e;
-      color: white;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      box-shadow: 0 10px 25px rgba(15, 118, 110, 0.45);
-    }
-
-    .toolbar button span.icon {
-      font-size: 1.05rem;
-    }
-
-    .toolbar button:active {
-      transform: translateY(1px);
-      box-shadow: 0 6px 15px rgba(15, 118, 110, 0.35);
-    }
-
-    .hint {
-      font-size: 0.8rem;
-      opacity: 0.7;
-    }
-
-    .cv {
-      background: white;
-      border-radius: 1rem;
-      padding: 2rem 2.25rem;
-      border: 1px solid #e5e7eb;
-    }
-
-    .cv-header {
-      display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 1.5rem;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 1.3rem;
-      margin-bottom: 1.5rem;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      padding-bottom: 18px;
     }
 
-    .name-role {
-      flex: 2;
+    .title-block h1 {
+      font-size: 1.9rem;
+      letter-spacing: 0.04em;
     }
 
-    .name-role h1 {
-      margin: 0;
-      font-size: 2rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-
-    .name-role h2 {
-      margin: 0.15rem 0 0;
-      font-size: 1.05rem;
+    .title-block h2 {
+      font-size: 0.98rem;
       font-weight: 500;
-      color: #475569;
+      color: var(--muted);
+      margin-top: 4px;
     }
 
     .contact {
-      flex: 1.4;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
+      color: var(--muted);
       text-align: right;
-      color: #4b5563;
     }
 
-    .contact div {
-      margin-bottom: 0.1rem;
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     .section {
-      margin-bottom: 1.5rem;
+      margin-bottom: 18px;
     }
 
     .section-title {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: #6b7280;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      color: var(--muted);
+      margin-bottom: 6px;
     }
 
-    .section-body {
-      font-size: 0.93rem;
-      color: #111827;
+    .summary {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #d1d5db;
     }
 
-    .pill-list {
+    .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.2rem;
+      gap: 6px;
+      margin-bottom: 6px;
     }
 
     .pill {
-      background: #e0f2fe;
+      font-size: 0.78rem;
+      padding: 4px 8px;
       border-radius: 999px;
-      padding: 0.18rem 0.6rem;
-      font-size: 0.8rem;
-      color: #0f172a;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: #e5e7eb;
       white-space: nowrap;
     }
 
     .experience-item {
-      margin-bottom: 0.9rem;
+      margin-bottom: 10px;
     }
 
-    .experience-header {
+    .exp-header {
       display: flex;
       justify-content: space-between;
-      gap: 0.5rem;
-      font-size: 0.9rem;
+      gap: 6px;
+      font-size: 0.86rem;
+    }
+
+    .exp-role {
       font-weight: 600;
+      color: #e5e7eb;
     }
 
-    .experience-company {
-      color: #111827;
-    }
-
-    .experience-role {
+    .exp-company {
+      color: var(--muted);
       font-weight: 500;
-      color: #374151;
     }
 
-    .experience-dates {
-      font-size: 0.85rem;
-      color: #6b7280;
+    .exp-dates {
+      font-size: 0.8rem;
+      color: var(--muted);
       white-space: nowrap;
-      text-align: right;
     }
 
-    .experience-location {
-      font-size: 0.83rem;
-      color: #9ca3af;
+    .exp-bullets {
+      margin-top: 4px;
+      margin-left: 16px;
+      font-size: 0.84rem;
+      color: #d1d5db;
     }
 
-    .experience-body {
-      margin-top: 0.25rem;
-      font-size: 0.9rem;
+    .exp-bullets li {
+      margin-bottom: 2px;
     }
 
-    .experience-body ul {
-      margin: 0.15rem 0 0.35rem 1.2rem;
-      padding: 0;
+    .inline-list {
+      font-size: 0.84rem;
+      color: #d1d5db;
     }
 
-    .experience-body li {
-      margin-bottom: 0.15rem;
+    .inline-list span {
+      color: var(--muted);
+      font-weight: 500;
     }
 
-    .two-cols {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 720px) {
-      body {
-        padding: 1rem;
+    @media (max-width: 640px) {
+      .card {
+        padding: 20px 16px;
       }
-
-      .page {
-        padding: 1.5rem 1.25rem;
-        border-radius: 1rem;
-      }
-
-      .cv {
-        padding: 1.4rem 1.3rem;
-      }
-
-      .cv-header {
-        flex-direction: column;
-        text-align: left;
-      }
-
       .contact {
         text-align: left;
       }
-
-      .two-cols {
-        grid-template-columns: 1fr;
+      .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
       }
-    }
-
-    @media print {
-      body {
-        background: white;
-        padding: 0;
-      }
-
-      .page {
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0;
-      }
-
-      .toolbar {
-        display: none;
-      }
-
-      .cv {
-        border-radius: 0;
-        border: none;
+      .exp-dates {
+        white-space: normal;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="toolbar">
-      <div>
-        <div class="toolbar-title">CV – Nicolás Lagos</div>
-        <div class="hint">Click “Download as PDF” and choose “Save as PDF” in your browser.</div>
-      </div>
-      <button onclick="window.print()">
-        <span class="icon">⬇️</span>
-        <span>Download as PDF</span>
-      </button>
-    </div>
-
-    <main class="cv">
-      <header class="cv-header">
-        <div class="name-role">
+  <main class="page">
+    <section class="card">
+      <header class="header">
+        <div class="title-block">
           <h1>NICOLÁS LAGOS</h1>
-          <h2>Full-Stack / Mobile Software Engineer</h2>
+          <h2>Full-Stack &amp; Mobile Software Engineer</h2>
         </div>
         <div class="contact">
-          <div>Santiago, Chile</div>
-          <div>nicolagos.94@gmail.com</div>
-          <div>+44 7735 026851</div>
-          <div>linkedin.com/in/nicolagosr</div>
+          <div>Santiago, Chile · EU relocation 2027</div>
+          <div>Email: <a href="mailto:nicolagos.94@gmail.com">nicolagos.94@gmail.com</a></div>
+          <div>Phone: <a href="tel:+447832620584">+44 7832 620584</a></div>
+          <div>LinkedIn: <a href="https://www.linkedin.com/in/nicolagosr" target="_blank">/in/nicolagosr</a></div>
+          <div>GitHub: <a href="https://github.com/malagosr" target="_blank">@malagosr</a></div>
         </div>
       </header>
 
       <section class="section">
-        <div class="section-title">Profile</div>
-        <div class="section-body">
-          Computer Engineer with 6+ years of experience in mobile and backend development, mainly in the financial, retail and healthcare sectors.
-          Strong focus on React Native applications and Spring Boot microservices, with experience in Kubernetes, Docker and CI/CD pipelines.
-          Very detail-oriented, responsible and committed to improving team efficiency. Comfortable working with distributed teams, async communication and English-speaking stakeholders.
+        <h3 class="section-title">Summary</h3>
+        <p class="summary">
+          Full-stack developer specialized in React Native, Java Spring Boot and AWS, with solid experience in mobile
+          architectures, backend microservices, cloud deployments and DevOps automation. Detail-oriented, fast-learning and
+          able to own features end-to-end in agile, cross-functional teams.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">Core Skills</h3>
+        <div class="pill-row">
+          <span class="pill">React Native</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Redux Toolkit</span>
+          <span class="pill">Java</span>
+          <span class="pill">Spring Boot</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">AWS</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Kubernetes</span>
+          <span class="pill">SQL Server</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">CI/CD</span>
+          <span class="pill">Fortify</span>
+          <span class="pill">Dependabot</span>
         </div>
       </section>
 
       <section class="section">
-        <div class="section-title">Core Skills</div>
-        <div class="section-body two-cols">
-          <div>
-            <strong>Frontend / Mobile</strong>
-            <div class="pill-list">
-              <span class="pill">React Native</span>
-            </div>
+        <h3 class="section-title">Experience</h3>
 
-            <strong>Backend</strong>
-            <div class="pill-list">
-              <span class="pill">Spring Boot (Java)</span>
+        <article class="experience-item">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Senior Mobile Developer</div>
+              <div class="exp-company">Sii Group · Financial Sector</div>
             </div>
-
-            <strong>Databases</strong>
-            <div class="pill-list">
-              <span class="pill">Microsoft SQL Server</span>
-              <span class="pill">MongoDB (Azure)</span>
-            </div>
+            <div class="exp-dates">Jun 2025 – Present</div>
           </div>
-          <div>
-            <strong>Cloud & DevOps</strong>
-            <div class="pill-list">
-              <span class="pill">AWS</span>
-              <span class="pill">Azure</span>
-              <span class="pill">Kubernetes</span>
-              <span class="pill">Docker</span>
-            </div>
+          <ul class="exp-bullets">
+            <li>Develop secure mobile features for a financial client using React Native.</li>
+            <li>Build and maintain Spring Boot microservices for onboarding and payment flows.</li>
+            <li>Improve system stability and reduce API latency through refactoring and monitoring.</li>
+          </ul>
+        </article>
 
-            <strong>Quality & Security</strong>
-            <div class="pill-list">
-              <span class="pill">Automated tests</span>
-              <span class="pill">Fortify</span>
-              <span class="pill">Dependabot</span>
+        <article class="experience-item">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Software Developer</div>
+              <div class="exp-company">Glofy · Healthcare</div>
             </div>
-
-            <strong>Languages</strong>
-            <div class="pill-list">
-              <span class="pill">Spanish (Native)</span>
-              <span class="pill">English (Advanced)</span>
-            </div>
+            <div class="exp-dates">Nov 2024 – Jun 2025</div>
           </div>
-        </div>
+          <ul class="exp-bullets">
+            <li>Developed the web and mobile front-end for an ICU patient logistics platform.</li>
+            <li>Implemented AWS Amplify Gen 2 for CI/CD automation of backend and web assets.</li>
+            <li>Optimized React component architecture and state management to enhance UX.</li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Software Developer</div>
+              <div class="exp-company">Salcobrand · Retail</div>
+            </div>
+            <div class="exp-dates">Nov 2023 – Mar 2024</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Built POS mobile application in React Native for in-store operations.</li>
+            <li>Implemented scanning workflows and improved crash-handling and error reporting.</li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Software Engineer</div>
+              <div class="exp-company">Cuprum AFP · Financial</div>
+            </div>
+            <div class="exp-dates">Feb 2020 – Nov 2023</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Delivered features for a large-scale React Native financial app used by thousands of customers.</li>
+            <li>Developed and maintained Spring Boot microservices for backend operations.</li>
+            <li>Migrated SQL Server workloads to MongoDB on Azure, reducing maintenance overhead.</li>
+            <li>Implemented event traceability, notification services and Fintoc payment integration.</li>
+            <li>Resolved security issues using Fortify and automated dependency management via Dependabot.</li>
+            <li>Migrated legacy services to AWS and set up monitoring dashboards.</li>
+          </ul>
+        </article>
+
+        <article class="experience-item">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Data Analyst</div>
+              <div class="exp-company">BackSpace</div>
+            </div>
+            <div class="exp-dates">Mar 2019 – Jan 2020</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Modeled business processes in Bizagi and built Tableau dashboards for key metrics.</li>
+          </ul>
+        </article>
       </section>
 
       <section class="section">
-        <div class="section-title">Experience</div>
-        <div class="section-body">
-
-          <div class="experience-item">
-            <div class="experience-header">
-              <div>
-                <span class="experience-role">Senior Mobile Developer</span>
-                <span> – </span>
-                <span class="experience-company">SII Group</span>
-                <div class="experience-location">Remote / Chile</div>
-              </div>
-              <div class="experience-dates">Jun 2025 – Present</div>
-            </div>
-            <div class="experience-body">
-              <ul>
-                <li>Development of mobile applications for a client in the financial sector using React Native.</li>
-                <li>Development and maintenance of microservices that support mobile features in a banking context.</li>
-                <li>Collaboration with cross-functional teams (security, backend, business) in a highly regulated environment.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-header">
-              <div>
-                <span class="experience-role">Software Developer</span>
-                <span> – </span>
-                <span class="experience-company">Glofy</span>
-                <div class="experience-location">Remote / Chile</div>
-              </div>
-              <div class="experience-dates">Nov 2024 – Jun 2025</div>
-            </div>
-            <div class="experience-body">
-              <ul>
-                <li>Developed the front-end for a hospital logistics application managing ICU patients.</li>
-                <li>Implemented the project using AWS Amplify Generation 2 for hosting and backend integration.</li>
-                <li>Worked closely with stakeholders to improve workflows and visibility of ICU resources.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-header">
-              <div>
-                <span class="experience-role">Software Developer</span>
-                <span> – </span>
-                <span class="experience-company">Salcobrand</span>
-                <div class="experience-location">Chile</div>
-              </div>
-              <div class="experience-dates">Nov 2023 – Mar 2024</div>
-            </div>
-            <div class="experience-body">
-              <ul>
-                <li>Developed and maintained a point-of-sale (POS) mobile application using React Native.</li>
-                <li>Improved performance and stability for high-volume retail environments.</li>
-                <li>Collaborated with backend and infrastructure teams to ensure reliable integrations.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-header">
-              <div>
-                <span class="experience-role">Software Engineer</span>
-                <span> – </span>
-                <span class="experience-company">Cuprum</span>
-                <div class="experience-location">Chile</div>
-              </div>
-              <div class="experience-dates">Feb 2020 – Nov 2023</div>
-            </div>
-            <div class="experience-body">
-              <ul>
-                <li>Developed mobile application screens and components using React Native.</li>
-                <li>Implemented and maintained backend services for the mobile app using Spring Boot.</li>
-                <li>Created and automated tests to improve release confidence and reduce regressions.</li>
-                <li>Implemented event traceability and a notification system.</li>
-                <li>Integrated the Fintoc payment method.</li>
-                <li>Migrated a Microsoft SQL database to MongoDB hosted on Azure.</li>
-                <li>Detected and remediated vulnerabilities using Fortify and Dependabot.</li>
-                <li>Migrated an on-premise service to AWS and monitored services in the cloud.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-header">
-              <div>
-                <span class="experience-role">Data Analyst</span>
-                <span> – </span>
-                <span class="experience-company">BackSpace</span>
-                <div class="experience-location">Chile</div>
-              </div>
-              <div class="experience-dates">Mar 2019 – Jan 2020</div>
-            </div>
-            <div class="experience-body">
-              <ul>
-                <li>Gathered and grouped requirements for process flows.</li>
-                <li>Modeled business processes in Bizagi.</li>
-                <li>Created analytical dashboards in Tableau to support decision-making.</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
+        <h3 class="section-title">Education &amp; Languages</h3>
+        <p class="inline-list">
+          <span>Education:</span> Bachelor’s Degree in Computer Engineering – Universidad Técnica Federico Santa María, Chile
+        </p>
+        <p class="inline-list">
+          <span>Languages:</span> Spanish (Native), English (Advanced – C1)
+        </p>
       </section>
-
-      <section class="section two-cols">
-        <div>
-          <div class="section-title">Education</div>
-          <div class="section-body">
-            <strong>Universidad Técnica Federico Santa María</strong><br />
-            Bachelor’s Degree in Computer Engineering
-          </div>
-        </div>
-        <div>
-          <div class="section-title">Notes</div>
-          <div class="section-body">
-            Use this space to add a short summary tailored to each job application
-            (for example, highlight remote experience, time-zone, or specific tools the company uses).
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
+    </section>
+  </main>
 </body>
 </html>
