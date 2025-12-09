@@ -46,9 +46,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-      padding-bottom: 18px;
+      padding-bottom: 14px;
     }
 
     .title-block h1 {
@@ -76,6 +76,32 @@
 
     .contact a:hover {
       text-decoration: underline;
+    }
+
+    .download-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 18px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at top left, #38bdf8 0, #0f172a 50%);
+      color: #0b1120;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      filter: brightness(1.05);
     }
 
     .section {
@@ -175,6 +201,9 @@
       .exp-dates {
         white-space: normal;
       }
+      .download-wrapper {
+        justify-content: flex-start;
+      }
     }
   </style>
 </head>
@@ -194,6 +223,16 @@
           <div>GitHub: <a href="https://github.com/malagosr" target="_blank">@malagosr</a></div>
         </div>
       </header>
+
+      <div class="download-wrapper">
+        <a
+          class="download-btn"
+          href="Nicolas_Lagos_CV_International.pdf"
+          download
+        >
+          Download CV (PDF)
+        </a>
+      </div>
 
       <section class="section">
         <h3 class="section-title">Summary</h3>
@@ -216,7 +255,6 @@
           <span class="pill">AWS</span>
           <span class="pill">Docker</span>
           <span class="pill">Kubernetes</span>
-          <span class="pill">SQL Server</span>
           <span class="pill">PostgreSQL</span>
           <span class="pill">MongoDB</span>
           <span class="pill">CI/CD</span>
@@ -283,8 +321,8 @@
           <ul class="exp-bullets">
             <li>Delivered features for a large-scale React Native financial app used by thousands of customers.</li>
             <li>Developed and maintained Spring Boot microservices for backend operations.</li>
-            <li>Migrated SQL Server workloads to MongoDB on Azure, reducing maintenance overhead.</li>
-            <li>Implemented event traceability, notification services and Fintoc payment integration.</li>
+            <li>Migrated legacy workloads to MongoDB on Azure, reducing maintenance overhead.</li>
+            <li>Implemented notification services and Fintoc payment integration.</li>
             <li>Resolved security issues using Fortify and automated dependency management via Dependabot.</li>
             <li>Migrated legacy services to AWS and set up monitoring dashboards.</li>
           </ul>
