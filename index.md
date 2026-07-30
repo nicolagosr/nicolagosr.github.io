@@ -1,3 +1,8 @@
+---
+layout: default
+title: Nicolás Lagos — Mobile Engineer
+---
+
 # NICOLÁS LAGOS
 
 **Mobile Engineer | React Native · Node.js & Spring Boot Microservices**
