@@ -1,8 +1,3 @@
----
-layout: default
-title: Nicolás Lagos — Mobile Engineer
----
-
 # NICOLÁS LAGOS
 
 **Mobile Engineer | React Native · Node.js & Spring Boot Microservices**
@@ -83,26 +78,3 @@ Licenciado en Ciencias de la Ingeniería Informática
 ## LANGUAGES
 
 Spanish — Native · English — Advanced (C1)
-
----
----
-
-# LINKEDIN
-
-## Headline
-
-Mobile Engineer | React Native & Spring Boot Microservices | Fintech & Healthcare | Open to remote roles
-
-## About
-
-I build mobile applications that ship — and the backend services behind them.
-
-Over the past six years I've delivered React Native applications in regulated environments: pension funds, retail pharmacy, healthcare, and banking. That means building where correctness matters and where a defect has consequences beyond a bad review.
-
-What I bring that most mobile developers don't is that I'm equally at home in the backend. Spring Boot and Node.js microservices, database migrations from SQL Server to MongoDB, on-premise to AWS migrations, CI/CD pipelines, production monitoring. I've taken features from an empty screen through to a deployed service with observability on it.
-
-I also treat security as part of the job rather than someone else's specialty — vulnerability detection and remediation with Fortify and Dependabot inside financial-sector code.
-
-I work fully remotely from Santiago, Chile, with complete overlap with US business hours.
-
-Open to remote opportunities with companies outside Chile.
