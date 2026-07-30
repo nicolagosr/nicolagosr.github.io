@@ -5,10 +5,10 @@ title: Nicolás Lagos — Mobile Engineer
 
 # NICOLÁS LAGOS
 
-**Mobile Engineer | React Native · Node.js & Spring Boot Microservices**
+**Mobile Engineer** · React Native · Node.js & Spring Boot Microservices
 
 Santiago, Chile — Available fully remote (UTC-4, full overlap with US business hours)
-nicolagos.94@gmail.com · linkedin.com/in/nicolagosr
+nicolas@nicolagos.com · linkedin.com/in/nicolagosr
 
 ---
 
